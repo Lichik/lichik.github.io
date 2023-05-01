@@ -19,7 +19,7 @@
     var user = WebApp.initData;
     console.log(user);
     document.getElementById("t1").innerHTML = "Hello, @"+user;
-    document.getElementById("hellouser").innerHTML = "Hello, @"+user["user"]["username"];
+    document.getElementById("hellouser").innerHTML = "Hello, @"+user.user;
     MainButton.text = "Добавить домен";
     MainButton.show();
   </script>
