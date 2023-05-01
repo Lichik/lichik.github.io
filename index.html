@@ -16,10 +16,10 @@
   <script>
     var WebApp = window.Telegram.WebApp;
     var MainButton = WebApp.MainButton;
-    var user = WebApp.initDataUnsafe;
+    var _user = WebApp.initDataUnsafe;
     console.log(user);
-    document.getElementById("t1").innerHTML = "Hello, @"+user;
-    document.getElementById("hellouser").innerHTML = "Hello, @"+user.user["username"];
+    document.getElementById("t1").innerHTML = "Hello, @"+_user;
+    document.getElementById("hellouser").innerHTML = "Hello";
     MainButton.text = "Добавить домен";
     MainButton.show();
   </script>
