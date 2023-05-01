@@ -16,7 +16,7 @@
     var MainButton = WebApp.MainButton;
     var user = WebApp.initData.user;
     console.log(user);
-    document.getElementById("hellouser").innerHTML = "Hello, "+user.username;
+    document.getElementById("hellouser").innerHTML = "Hello, "+user.username+"\n"+user;
     MainButton.text = "Добавить домен";
     MainButton.show();
   </script>
