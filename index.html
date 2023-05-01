@@ -10,12 +10,15 @@
   <h2 style="margin-left:auto;margin-right:auto;display:block;">
     Выбери домен из списка
   </h2>
-  
+  <span id="t1">
+    
+  </span>
   <script>
     var WebApp = window.Telegram.WebApp;
     var MainButton = WebApp.MainButton;
     var user = WebApp.initData.user;
     console.log(user);
+    document.getElementById("t1").innerHTML = "Hello, @"+user;
     document.getElementById("hellouser").innerHTML = "Hello, @"+user["username"];
     MainButton.text = "Добавить домен";
     MainButton.show();
