@@ -14,7 +14,8 @@
   <script>
     var WebApp = window.Telegram.WebApp;
     var MainButton = WebApp.MainButton;
-    document.getElementById("hellouser").innerHTML = "Hello, "+WebApp.initData;
+    var user = WebApp.initData;
+    document.getElementById("hellouser").innerHTML = "Hello, "+user.username;
     MainButton.text = "Добавить домен";
     MainButton.show();
   </script>
