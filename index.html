@@ -7,7 +7,7 @@
     <body>
         <main>
             <h1 id="page_title">
-                Hello, 
+                Привет, 
             </h1>
             <h2 id="page_subtitle">
                 Выбери домен из списка
@@ -30,8 +30,8 @@
         <script>
             var WebApp = window.Telegram.WebApp;
             var MainButton = WebApp.MainButton;
-            var _user = WebApp.initDataUnsafe;
-            document.getElementById("hellouser").innerHTML = "Hello";
+            var _user = JSON.parse(decodeURI(WebApp.initData));
+            document.getElementById("page_title").innerHTML = "Привет, "+_user["user"]["username"];
             MainButton.text = "Добавить домен";
             MainButton.show();
           </script>
