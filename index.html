@@ -30,9 +30,9 @@
         <script>
             var WebApp = window.Telegram.WebApp;
             var MainButton = WebApp.MainButton;
-            // JSON.parse(decodeURI(WebApp.initData))
-            var _user = JSON.parse(decodeURI(WebApp.initData)).user;
-            document.getElementById("page_title").innerHTML = "Привет, "+_user["username"];
+            // JSON.parse(decodeURI(WebApp.initData)).user;
+            var _user = WebApp.initDataUnsafe.user.username;
+            document.getElementById("page_title").innerHTML = "Привет, "+_user;
             MainButton.text = "Добавить домен";
             MainButton.show();
           </script>
